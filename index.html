@@ -11,7 +11,11 @@
 <body>
     <!-- Picture -->
     <div class="left">
-    <div class="pic"></div>
+        <div class="pic">
+            <!-- <img src="halie-west-25xggax4bSA-unsplash.jpg" 
+            alt="green leaves" class="first-pic"> -->
+            <img src="odin-lined.png" class="second-pic">
+        </div>
     </div>
 
     <div class="right">
@@ -33,21 +37,46 @@
         <div class="middle">   
             <form>
                 <p class="lets-do-this">Let's do this!</p>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name" name="firstName">
-                <label for="last-name">LAST NAME</label>
-                <input type="text" id="last-name" name="lastName">
-                <label for="user-email">EMAIL</label>
-                <input type="email" id="user-email" name="userEmail">
+                <div class="big container">
+                <div class="container" id="container-left">
+                    
+                        <label for="first-name">FIRST NAME
+                        <input type="text" id="first-name" name="firstName">
+                        </label>
+                        <label for="last-name">LAST NAME
+                        <input type="text" id="last-name" name="lastName">
+                        </label>
+                        <label for="phone-number">PHONE NUMBER
+                        <input type="text" id="phone-number" name="phoneNumber">
+                        </label>
+
+                </div>
+                <div class="container" id="container-right">
+                    
+                        <label for="user-email">EMAIL
+                        <input type="email" id="user-email" name="userEmail">
+                        </label>
+                        <label for="password">PASSWORD
+                        <input type="password" id="password" name="password" required
+                        pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
+                        </label>
+                        <label for="confirm-password">CONFIRM PASSWORD
+                        <input type="password" id="confirm-password" name="confirmPassword" required
+                        pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
+                        </label>
+                        
+                    
+                </div>
+            </div>
+        </div>
 
         <!-- Third column -->
-                
+        <div class="bottom">        
                 <button>Create Account</button>
                 <p>Already have an account?<button>Log in</button></p>
-
+        </div>
 
             </form>
-        </div>
 
 
     </div>
