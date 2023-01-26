@@ -46,6 +46,7 @@ body {
     flex: 1;
     padding: 50px;
     border-radius: 10px round;
+    box-shadow: 0 0 5px 1px gray;
 }
 
 .container {
@@ -66,7 +67,22 @@ label {
     border-radius: 10px round;
     padding: 30px 50px;
     background-color: rgb(226, 210, 210);
-    box-shadow: inset;
+    box-shadow: 0 0 5px 1px gray;
 }
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+  
+  input:focus:invalid {
+    box-shadow: none;
+  }
+
+  .error {
+    font-family: customFontBold;
+    font-size: .7rem;
+    color: rgb(255, 69, 100);
+    position: absolute;
+  }
 
 
