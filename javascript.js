@@ -1,7 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+
+
 const firstName = document.querySelector("#first-name");
 const lastName = document.querySelector("#last-name");
 const phoneNumber = document.querySelector("#phone-number");
-const userEmail = document.querySelector("#user-email");
+const userEmail = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirm-password");
 const emailError = document.querySelector('#email-error');
@@ -14,9 +17,9 @@ const pwCError = document.querySelector('#passwordC-error');
 
 
 
-pw.addEventListener("input", function (event) {
-    if (pw.validity.patternMismatch){
-      const currentValue = pw.value;
+password.addEventListener("input", function (event) {
+    if (password.validity.patternMismatch){
+      const currentValue = password.value;
       const regExpCap = /[A-Z]/g;
       const regExpDig = /[0-9]/g;
       let result = '';
@@ -54,8 +57,8 @@ pw.addEventListener("input", function (event) {
 
 
 
-  pwC.addEventListener("input", function (event) {
-    if (pwC.value !== pw.value) {
+  confirmPassword.addEventListener("input", function (event) {
+    if (confirmPassword.value !== password.value) {
       pwCError.textContent = 'Passwords do not match';
     } else {
       pwCError.textContent = '';
@@ -66,9 +69,9 @@ pw.addEventListener("input", function (event) {
 
 userEmail.addEventListener("input", function (event) {
     if (userEmail.validity.typeMismatch) {
-      emailError.textContent = 'Please enter in a valid Email. ex(johnSmith@email.com)';
+      emailError.innerHTML = "Please enter in a valid Email.ex(johnSmith@email.com)";
     } else {
-      emailError.textContent = '';
+      emailError.setCustomValidity = '';
     }
   });
 
@@ -80,3 +83,5 @@ userEmail.addEventListener("input", function (event) {
       telError.textContent = '';
     }     
   });
+
+})
